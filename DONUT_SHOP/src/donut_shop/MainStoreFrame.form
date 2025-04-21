@@ -69,11 +69,11 @@
                   <Data value="Boston Cream Donut"/>
                   <Data value="Jelly-Filled Donut"/>
                 </Column>
-                <Column editable="true" title="Price ($)" type="java.lang.String">
-                  <Data value="2.50"/>
-                  <Data value="3.00"/>
-                  <Data value="3.20"/>
-                  <Data value="3.50"/>
+                <Column editable="true" title="Price ($)" type="java.lang.Double">
+                  <Data value="2.5"/>
+                  <Data value="3.0"/>
+                  <Data value="3.2"/>
+                  <Data value="3.5"/>
                   <Data value="3.75"/>
                 </Column>
               </Table>

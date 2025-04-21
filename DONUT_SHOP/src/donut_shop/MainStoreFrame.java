@@ -4,6 +4,7 @@
  */
 package donut_shop;
 
+import donut_shop.TransactionFrame;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -16,19 +17,14 @@ public class MainStoreFrame extends javax.swing.JFrame {
      * Creates new form DONUT_FRAME
      */
     public MainStoreFrame() {
-        initComponents();
-        String[][] data = {
-            {"1", "Glazed Donut", "2.50"},
-            {"2", "Chocolate Donut", "3.00"},
-            {"3", "Strawberry Donut", "3.20"},
-            {"4", "Boston Cream Donut", "3.50"},
-            {"5", "Jelly-Filled Donut", "3.75"}
-        };
+      
+    initComponents();
+    setLocationRelativeTo(null); // Center window
 
-        String[] columnNames = {"ID", "Donut Name", "Price"};
+ 
 
-        DefaultTableModel model = new DefaultTableModel(data, columnNames);
-        jTable1.setModel(model);
+        
+    
     }
 
     /**
@@ -58,18 +54,18 @@ public class MainStoreFrame extends javax.swing.JFrame {
         jTable1.setAutoCreateRowSorter(true);
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {"1", "Glazed Donut", "2.50"},
-                {"2", "Chocolate Donut", "3.00"},
-                {"3", "Strawberry Donut", "3.20"},
-                {"4", "Boston Cream Donut", "3.50"},
-                {"5", "Jelly-Filled Donut", "3.75"}
+                {"1", "Glazed Donut",  new Double(2.5)},
+                {"2", "Chocolate Donut",  new Double(3.0)},
+                {"3", "Strawberry Donut",  new Double(3.2)},
+                {"4", "Boston Cream Donut",  new Double(3.5)},
+                {"5", "Jelly-Filled Donut",  new Double(3.75)}
             },
             new String [] {
                 "ID", "Donut Name", "Price ($)"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.String.class
+                java.lang.String.class, java.lang.String.class, java.lang.Double.class
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -86,6 +82,7 @@ public class MainStoreFrame extends javax.swing.JFrame {
 
     private void btnProceedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProceedActionPerformed
        new TransactionFrame().setVisible(true);
+       this.dispose();
     }//GEN-LAST:event_btnProceedActionPerformed
 
     /**
